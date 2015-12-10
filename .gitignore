@@ -4,3 +4,7 @@ node_modules
 .sass-cache/
 *.css.map
 
+/Gemfile.lock
+*.rbc
+*.swp
+*.rbc
