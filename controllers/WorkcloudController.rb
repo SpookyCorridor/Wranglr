@@ -6,12 +6,13 @@ class WordcloudController < ApplicationController
 		erb :index 
 	end 
 
-	get '/stats:id'
+	get '/stats:id' do
 		erb :stats 
 	end 
 
 	post '/stats' do
 		cross_origin 
-		puts request
+		rs = JSON.parse(request.body.read).to_json
+		puts rs
 	end 
 end 

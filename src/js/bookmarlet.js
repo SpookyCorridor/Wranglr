@@ -23,7 +23,6 @@
 
 	function initMyBookmarklet() {
 		(window.initMyBookmarklet = function() {
-			window.open('http://www.google.com', '_blank');
 			var stats = {}; // request-body object of words 
 			var wordList = []; 
 			/*
