@@ -17,3 +17,13 @@ li {
   list-style-type: none;
   display: inline;
   padding: 5px; }
+
+h2 {
+  font-family: 'Georgia', 'Garamond', serif; }
+
+body {
+  box-sizing: border-box; }
+  body .container {
+    width: 75%;
+    margin: 0 auto;
+    dislay: block; }
