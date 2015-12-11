@@ -4,7 +4,6 @@ assets do
   serve '/js', :from => '../dist/js'
   js :application, [
     '/js/app.min.js'
-    # You can also do this: 'js/*.js'
   ]
 
   serve '/css', :from => '../dist/css'
