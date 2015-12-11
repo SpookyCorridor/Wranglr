@@ -82,10 +82,27 @@
 						return a proper URL since popup blockers prevent an automatic 
 						redirect with async
 					*/ 
-					$('body').append('<a class="WranglrLink" href="http://localhost:9292/stats/' + data + '">test</a>');
+					
+					$('body').append('<div class="wranglr-link"><a target="_blank" href="http://localhost:9292/stats/' + data + '">see wordcloud</a><input type="button" value="close"/></div>');
+					
+					var style = {
+						backgroundColor: "#F7F7F7", 
+						zIndex: 99999999,
+						position: "absolute",
+						top: "40%",
+						left: "40%", 
+						padding: "30px",
+						border: "2px solid #c3c3c3"
+					};
+					$('.wranglr-link').css(style);
+					$('.wranglr-link > a').css("marginRight", "10px");
+
+					$('.wranglr-link > input').on('click', function(){
+						$('.wranglr-link').hide('slow'); 
+					})
 				}
  			});
-
+			
 			
 		})(); 
 	}
