@@ -62,8 +62,12 @@ page and should cause as minimal damage to the original styling and content as p
 The bookmarklet uses Math.random in its script call so that users won't cache version 1.0 
 forever should it be updated. 
 
+# Other Notes 
 
-
+This was overall a fun project because I learned about something that's interesting but 
+entirely unfamiliar. The biggest hurdle was initially conceptualizing how to organize and 
+display the data. I feel that my current setup is a fine solution for both large and small 
+uses and it has been left open ended for the future. 
 
 
 
