@@ -6,13 +6,17 @@ class WordcloudController < ApplicationController
 		erb :index 
 	end 
 
-	get '/stats:id' do
+	get '/stats/:id' do
+		@cloud = Wordcloud.find(params[:id])
+		@wordlist = @cloud.wordlist
 		erb :stats 
 	end 
 
 	post '/stats' do
 		cross_origin 
-		rs = JSON.parse(request.body.read).to_json
-		puts rs
+		@wordlist = JSON.parse(request.body.read).to_json
+		@cloud = Wordcloud.create({
+			wordlist: @wordlist 
+			})
 	end 
 end 
