@@ -18,5 +18,6 @@ class WordcloudController < ApplicationController
 		@cloud = Wordcloud.create({
 			wordlist: @wordlist 
 			})
+		@cloud['id'].to_s 
 	end 
 end 

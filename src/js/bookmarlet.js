@@ -50,10 +50,10 @@
 			wordList.sort();
 			for (i = 0; i < wordList.length; i++) {
 
-				/*
-					if the word already exists in the object then iterate
-					else: add it to the list! 
-				*/ 
+			/*
+				if the word already exists in the object then iterate
+				else: add it to the list! 
+			*/ 
 
 				stats.hasOwnProperty(wordList[i]) ? stats[wordList[i]] += 1 : stats[wordList[i]] = 1; 			
 			
@@ -81,11 +81,10 @@
 						return a proper URL since popup blockers prevent an automatic 
 						redirect with async
 					*/ 
-					$('body').append('<a class="wranglrCloud" href="'+data+'">link</a>"');  
+					$('body').append('<a href="http://localhost:9292/stats/' + data + '">test</a>');	
 				}
  			});
 
-			
 			
 		})(); 
 	}

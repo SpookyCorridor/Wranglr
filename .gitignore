@@ -8,3 +8,5 @@ node_modules
 *.rbc
 *.swp
 *.rbc
+
+dev.db 
