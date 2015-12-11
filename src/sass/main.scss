@@ -1,0 +1,27 @@
+@import '_variables';
+
+.one {
+	font-size: $font-cloud; 
+}
+
+.two {
+	font-size: $font-cloud + 0.5; 
+}
+
+.three {
+	font-size: $font-cloud + 1; 
+}
+
+.four {
+	font-size: $font-cloud + 1.5; 
+}
+
+.five {
+	font-size: $font-cloud + 2; 
+}
+
+li {
+	list-style-type: none; 
+	display: inline; 
+	padding: 5px; 
+}

@@ -82,7 +82,7 @@
 						return a proper URL since popup blockers prevent an automatic 
 						redirect with async
 					*/ 
-					$('body').append('<a href="http://localhost:9292/stats/' + data + '">test</a>');	
+					$('body').append('<a class="WranglrLink" href="http://localhost:9292/stats/' + data + '">test</a>');
 				}
  			});
 

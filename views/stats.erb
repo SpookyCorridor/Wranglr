@@ -3,19 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="/css/main.min.css">
 </head>
 <body>
+
+	<h1>Word Cloud</h1>
+	<hr>
 	<% @wordlist.each do |word| %>  
 		<% if word[1] == @least_frequent %> 
-			<li class="one">> <%= word  %> </li>
+			<li class="one"> <%= word[0]  %> </li>
 		<% elsif word[1] > @least_frequent && word[1] < @mean %> 
-			<li class="two">> <%= word  %> </li>
+			<li class="two"> <%= word[0]  %> </li>
 		<% elsif word[1] <= @mean %> 
-			<li class="three">> <%= word  %> </li>
+			<li class="three"> <%= word[0]  %> </li>
 		<% elsif word[1] > @mean && word[1] < @most_frequent %> 
-			<li class="four">> <%= word  %> </li>
+			<li class="four"> <%= word[0]  %> </li>
 		<% else %> 
-			<li class="five"> <%= word %> </li>
+			<li class="five"> <%= word[0] %> </li>
 		<% end %> 
 	<% end %>
 </body>
