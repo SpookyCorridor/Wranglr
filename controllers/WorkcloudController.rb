@@ -1,6 +1,7 @@
 class WordcloudController < ApplicationController
 
 	register Sinatra::CrossOrigin
+	register Sinatra::AssetPack
 
 	get '/' do 
 		erb :index 

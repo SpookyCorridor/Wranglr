@@ -5,6 +5,7 @@ gem 'sinatra'
 gem 'json'
 gem 'sinatra-activerecord'
 gem "sinatra-cross_origin", "~> 0.3.1"
+gem "sinatra-assetpack"
 
 group :development do 
 	gem 'sqlite3'
