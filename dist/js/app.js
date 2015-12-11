@@ -86,7 +86,7 @@
 						redirect with async
 					*/ 
 					
-					$('body').append('<div class="wranglr-link"><a target="_blank" href="http://localhost:9292/stats/' + data + '">see wordcloud</a><input type="button" value="close"/></div>');
+					$('body').append('<div class="wranglr-link"><a target="_blank" href="https://ancient-everglades-3090.herokuapp.com/stats/' + data + '">see wordcloud</a><input type="button" value="close"/></div>');
 					
 					/* 
 						pull up an obvious window for the user that's not too annoying 
