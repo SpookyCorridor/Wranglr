@@ -62,6 +62,9 @@ page and should cause as minimal damage to the original styling and content as p
 The bookmarklet uses Math.random in its script call so that users won't cache version 1.0 
 forever should it be updated. 
 
+Set up assets to serve the js and css libraries off the hosted server so the bookmarklet actually works
+outside of local dev 
+
 # Other Notes 
 
 This was overall a fun project because I learned about something that's interesting but 
