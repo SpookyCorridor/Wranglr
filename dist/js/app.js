@@ -46,7 +46,8 @@
 			/* 
 				sorting prior to building up the request object for AJAX
 			*/ 
-
+			var sort = [];
+			for (var word in wordList)
 			wordList.sort();
 			for (i = 0; i < wordList.length; i++) {
 
@@ -63,7 +64,6 @@
 				For larger sets of text, a header request wouldn't be possible. 
 				set processData to false to send over data in request body instead
 			*/ 
-
 
 			$.ajax({
 				url: "http://localhost:9292/stats",

@@ -8,7 +8,8 @@ class WordcloudController < ApplicationController
 
 	get '/stats/:id' do
 		@cloud = Wordcloud.find(params[:id])
-		@wordlist = @cloud.wordlist
+		@wordlist = eval(@cloud.wordlist)
+		@most_frequent = @wordlist.values.sort.pop
 		erb :stats 
 	end 
 

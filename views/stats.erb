@@ -5,6 +5,9 @@
 	<title>Document</title>
 </head>
 <body>
-	<p><%= @wordlist %> </p>
+	<% @wordlist.each do |word| %> 
+		<%= word %> 
+	<% end %> 
+	<%= @most_frequent %> 
 </body>
 </html>
