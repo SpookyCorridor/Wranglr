@@ -44,6 +44,26 @@ All I need for now is a one table database, an about page, and a cloud route.
 
 - Implement Rake for migrations with ActiveRecord
 
+## Up and Running 
+
+- Grab all relevant words in the body tag
+- Send over to the server to save 
+- Parse through and grab the lowest, mean, and highest numbers 
+  * Allows for scaling to any size of website or document
+  * Keeps a cleanly formatted guide of how large or small words can get
+- Alphabetize properly by ignoring case
+
+### Final Touches
+
+After the AJAX call returns, the server sends the client a proper id so the bookmarklet
+can build a link to display the word cloud. This is done as a discrete overlay of the current 
+page and should cause as minimal damage to the original styling and content as possible. 
+
+The bookmarklet uses Math.random in its script call so that users won't cache version 1.0 
+forever should it be updated. 
+
+
+
 
 
 

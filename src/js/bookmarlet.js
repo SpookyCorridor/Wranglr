@@ -25,6 +25,7 @@
 		(window.initMyBookmarklet = function() {
 			var stats = {}; // request-body object of words 
 			var wordList = []; 
+			
 			/*
 				Grab only text in body. Make it lowercase to easily 
 				alphabetize later while in a hash 
@@ -47,6 +48,7 @@
 			/* 
 				sorting prior to building up the request object for AJAX
 			*/ 
+
 			var sort = [];
 			for (var word in wordList)
 			wordList.sort();
@@ -77,6 +79,7 @@
 					console.log(err);
 				},
 				success: function(data) {
+
 					/* 
 						The server needs store the word cloud information and 
 						return a proper URL since popup blockers prevent an automatic 
@@ -85,6 +88,11 @@
 					
 					$('body').append('<div class="wranglr-link"><a target="_blank" href="http://localhost:9292/stats/' + data + '">see wordcloud</a><input type="button" value="close"/></div>');
 					
+					/* 
+						pull up an obvious window for the user that's not too annoying 
+						and easy to close. Try to make sure it's on top of anything else. 
+					*/ 
+
 					var style = {
 						backgroundColor: "#F7F7F7", 
 						zIndex: 99999999,
