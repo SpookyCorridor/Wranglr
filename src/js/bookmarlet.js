@@ -69,7 +69,7 @@
 			*/ 
 
 			$.ajax({
-				url: "http://localhost:9292/stats",
+				url: "https://ancient-everglades-3090.herokuapp.com//stats",
 				type: "POST",
 				processData: false, 
 				data: JSON.stringify(stats),
