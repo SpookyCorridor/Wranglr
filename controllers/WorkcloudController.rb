@@ -8,7 +8,7 @@ class WordcloudController < ApplicationController
 
 	get '/stats/:id' do
 		@cloud = Wordcloud.find(params[:id])
-		@wordlist = eval(@cloud.wordlist)
+		@wordlist = JSON.parse(@cloud.wordlist)
 
 		# the below instance variables are necessary for 
 		# figuring out how to rank each word and size it up 
