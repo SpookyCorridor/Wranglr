@@ -5,9 +5,18 @@
 	<title>Document</title>
 </head>
 <body>
-	<% @wordlist.each do |word| %> 
-		<%= word %> 
-	<% end %> 
-	<%= @most_frequent %> 
+	<% @wordlist.each do |word| %>  
+		<% if word[1] == @least_frequent %> 
+			<li class="one">> <%= word  %> </li>
+		<% elsif word[1] > @least_frequent && word[1] < @mean %> 
+			<li class="two">> <%= word  %> </li>
+		<% elsif word[1] <= @mean %> 
+			<li class="three">> <%= word  %> </li>
+		<% elsif word[1] > @mean && word[1] < @most_frequent %> 
+			<li class="four">> <%= word  %> </li>
+		<% else %> 
+			<li class="five"> <%= word %> </li>
+		<% end %> 
+	<% end %>
 </body>
 </html>

@@ -26,13 +26,14 @@
 			var stats = {}; // request-body object of words 
 			var wordList = []; 
 			/*
-				Grab only text in body. 
+				Grab only text in body. Make it lowercase to easily 
+				alphabetize later while in a hash 
 				There are probably ways of stripping away more potentially
 				unwanted things by avoiding asides or footers but not 
 				guaranteed 
 			*/ 
 
-			var content = $('body').text(); 
+			var content = $('body').text().toLowerCase(); 
 
 			/* 
 				Regex pattern is used to grab all the words because it's fast

@@ -10,6 +10,8 @@ class WordcloudController < ApplicationController
 		@cloud = Wordcloud.find(params[:id])
 		@wordlist = eval(@cloud.wordlist)
 		@most_frequent = @wordlist.values.sort.pop
+		@least_frequent = @wordlist.values.sort.shift
+		@mean = (@wordlist.values.sum / @wordlist.values.size.to_f).ceil
 		erb :stats 
 	end 
 
